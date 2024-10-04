@@ -5,7 +5,7 @@
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
 
-body {
+/*body {
   color: var(--color-primary);
   background-color: var(--color-secondary);
 }
@@ -16,4 +16,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+}*/
+
+.logo {
+  width: 150px;
+  height: 80px;
+  padding: 10px;
+  padding-left: 30px;
 }
