@@ -24,3 +24,18 @@
   padding: 10px;
   padding-left: 30px;
 }
+
+nav li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+header a {
+  color: #0a3641;
+  text-decoration: none;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+}
