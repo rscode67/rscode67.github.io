@@ -18,16 +18,27 @@
   text-align: center;
 }*/
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .logo {
   width: 150px;
   height: 80px;
   padding: 10px;
-  padding-left: 30px;
+  padding-left: 40px;
+  align-items: center;
 }
 
-nav li {
+.navlist li {
   text-decoration: none;
   display: inline-block;
+  margin-left: 20px;
+  margin-top: 45px;
+}
+
+.navlist a:hover {
+  text-decoration: underline;
 }
 
 header a {
@@ -36,6 +47,24 @@ header a {
   padding: 10px;
 }
 
+.navbar {
+  background-color: #e2e9eb;
+  padding: 20px;
+  display: flex;
+}
+
 img {
   width: 100%;
+}
+
+.cta-big {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #53a4b9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
 }
