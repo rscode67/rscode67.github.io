@@ -30,11 +30,17 @@ body {
   align-items: center;
 }
 
+.navbar {
+  background-color: #e2e9eb;
+  padding: 20px;
+  display: flex;
+}
+
 .navlist li {
   text-decoration: none;
   display: inline-block;
-  margin-left: 20px;
-  margin-top: 45px;
+  margin-top: 40px;
+  margin-left: 200px;
 }
 
 .navlist a:hover {
@@ -44,17 +50,6 @@ body {
 header a {
   color: #0a3641;
   text-decoration: none;
-  padding: 10px;
-}
-
-.navbar {
-  background-color: #e2e9eb;
-  padding: 20px;
-  display: flex;
-}
-
-img {
-  width: 100%;
 }
 
 .cta-big {
@@ -73,4 +68,21 @@ img {
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
+  position: relative;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.banner h1 {
+  font-size: 20px;
+}
+
+.cta-big {
+  position: absolute;
+  left: 350px;
+  top: 100px;
 }
