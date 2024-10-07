@@ -66,5 +66,11 @@ img {
   cursor: pointer;
 }
 
-
+.banner {
+  background-image: url("../assets/images/banner.jpg");
+  min-height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
 }
