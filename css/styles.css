@@ -18,22 +18,51 @@
   text-align: center;
 }*/
 
+@font-face {
+  font-family: "Poppins Medium";
+  src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");
+}
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.logo {
-  width: 150px;
-  height: 80px;
-  padding: 10px;
-  padding-left: 40px;
-  align-items: center;
+header {
+  border: green solid;
+}
+
+.banner {
+  border: red solid;
+}
+
+.column {
+  border: blue solid;
+}
+
+.product-container {
+  border: lightgreen solid;
+}
+
+.footer-container {
+  border: black solid;
+}
+
+.logo,
+.logo-footer {
+  width: 140px;
+  height: 60px;
+}
+
+.profile-icon,
+.icon {
+  max-width: 30px;
+  margin-top: 30px;
+  margin-left: 70px;
 }
 
 .navbar {
@@ -43,12 +72,9 @@ body {
 }
 
 .navlist li {
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: flex-end;
-  flex-direction: row;
+  display: inline-block;
   margin-top: 40px;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 
 .navlist a:hover,
@@ -62,18 +88,6 @@ header a {
   text-decoration: none;
 }
 
-.cta-big {
-  padding: 15px 20px;
-  border-radius: 10px;
-  background: #53a4b9;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  left: 350px;
-  top: 100px;
-}
-
 .banner {
   background-image: url("../assets/images/banner.jpg");
   min-height: 90vh;
@@ -85,16 +99,28 @@ header a {
 }
 
 .banner-content {
-  max-width: 900px;
+  max-width: 50%;
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 150px;
+  left: 200px;
   text-align: center;
+  border: red solid;
 }
 
-.banner h1 {
-  font-size: 20px;
-  max-width: 80%;
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.cta-big {
+  padding: 20px 95px;
+  border-radius: 10px;
+  background: #53a4b9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  min-width: 30%;
 }
 
 .cta-small {
