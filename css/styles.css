@@ -18,6 +18,12 @@
   text-align: center;
 }*/
 
+@media only screen and(max-width:600px) {
+  body {
+    width: 90%;
+  }
+}
+
 @font-face {
   font-family: "Poppins Medium";
   src: url(../assets/fonts/Poppins-Medium.ttf) format("truetype");
@@ -42,6 +48,18 @@ header {
 
 .column {
   border: blue solid;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 200px;
+}
+
+.promo,
+.delivery {
+  background-color: #e2e9eb;
+  width: 400px;
+  height: 150px;
+  padding: 20px 50px;
+  border-radius: 20px;
 }
 
 .product-container {
@@ -58,11 +76,19 @@ header {
   height: 60px;
 }
 
+.logo {
+  margin-left: 150px;
+}
+
 .profile-icon,
 .icon {
   max-width: 30px;
-  margin-top: 30px;
-  margin-left: 70px;
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+.profile-icon {
+  margin-left: 100px;
 }
 
 .navbar {
@@ -71,10 +97,14 @@ header {
   display: flex;
 }
 
+nav {
+  margin-left: 150px;
+}
+
 .navlist li {
   display: inline-block;
-  margin-top: 40px;
-  margin-left: 130px;
+  margin-top: 25px;
+  margin-left: 100px;
 }
 
 .navlist a:hover,
@@ -90,7 +120,7 @@ header a {
 
 .banner {
   background-image: url("../assets/images/banner.jpg");
-  min-height: 90vh;
+  min-height: 80vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: right;
@@ -101,8 +131,8 @@ header a {
 .banner-content {
   max-width: 50%;
   position: absolute;
-  top: 150px;
-  left: 200px;
+  top: 90px;
+  left: 160px;
   text-align: center;
   border: red solid;
 }
@@ -110,6 +140,11 @@ header a {
 h1 {
   font-size: 30px;
   font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .cta-big {
@@ -124,8 +159,6 @@ h1 {
 }
 
 .cta-small {
-  left: 250px;
-  top: 100px;
   background: #53a4b9;
   border: none;
   color: #fff;
@@ -133,11 +166,23 @@ h1 {
   padding: 15px 20px;
 }
 
-.product-item {
+.product-container {
+  padding: 50px 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/*.product-item {
+  height: 350px;
   padding: 100px;
   background-color: #e2e9eb;
   margin: 50px;
   position: relative;
+}*/
+
+.jacket_list {
+  width: 300px;
 }
 
 .footer-container {
@@ -168,4 +213,13 @@ h1 {
   color: #0a3641;
   text-decoration: none;
   margin-bottom: 0.5rem;
+}
+
+#story-section {
+  display: block;
+}
+
+.about-image {
+  height: 500px;
+  width: 350px;
 }
