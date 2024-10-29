@@ -1,0 +1,132 @@
+/* Use import to split up your CSS into manageable chunks */
+@import url("./reset.css");
+/* Files that are only needed to be imported are called partials */
+/* These are marked with an underscore: */
+@import url("./variables.css");
+/* Feel free to add as many of these imports as you need */
+
+/*body {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}*/
+
+@import url("./reset.css");
+
+/* Banner */
+
+.banner {
+  background: url("../assets/images/banner2.jpg");
+  padding: 60px 20px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  min-height: 440px;
+}
+
+.banner-content h1 {
+  margin: 0 100px;
+  color: #0a3641;
+  font-size: 1.7rem;
+}
+
+.cta_banner {
+  background: #53a4b9;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 52px;
+}
+
+/* Column */
+
+.column {
+  display: flex;
+  margin: 20px 200px;
+}
+
+.item {
+  text-align: center;
+  padding: 10px;
+  flex: 1; /* make it responsive */
+  margin: 10px;
+  border-radius: 10px;
+  color: #0a3641;
+  font-size: 1.2rem;
+}
+
+.item p {
+  margin: 5px 0;
+}
+
+.item img {
+  max-width: 70px;
+}
+
+.promo {
+  background: #ffffff;
+}
+
+.delivery {
+  background: #fff;
+}
+
+/* Bestsellers */
+
+.best-sellers {
+  text-align: center;
+  margin: 20px 0;
+  color: #0a3641;
+}
+
+.jacket_image {
+  max-width: 230px;
+  max-height: 270px;
+  min-height: 270px;
+}
+
+.jacket_name {
+  margin-top: 6px;
+  font-size: 1.4em;
+  color: #0a3641;
+}
+
+.jacket_description {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: #0a3641;
+}
+
+.jacket_price {
+  margin-top: 6px;
+  font-size: 1.1em;
+  color: #ec5858;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+  margin: 40px 90px;
+  justify-content: center;
+}
+
+.product-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  text-align: center;
+  padding: 10px;
+}

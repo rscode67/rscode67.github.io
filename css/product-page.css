@@ -1,0 +1,36 @@
+@import url("./reset.css");
+@import url(./variables.css);
+
+/* Product Page */
+
+.product_image {
+  max-width: 400px;
+  max-height: 390px;
+}
+
+.product_details {
+  max-width: 500px;
+  max-height: 490px;
+  line-height: 1.6;
+  color: var(--color-primary);
+  text-align: justify;
+}
+
+.product_container {
+  padding: 15px 40px;
+}
+
+.product_price {
+  display: flex;
+  margin-top: 20px;
+}
+
+.jacket_price {
+  margin-top: 10px;
+  color: #ec5858;
+}
+
+.product_cta {
+  margin-top: 10px;
+  margin-left: 40px;
+}

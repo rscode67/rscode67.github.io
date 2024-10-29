@@ -1,0 +1,62 @@
+@import url("./reset.css");
+@import url(./variables.css);
+
+/* Bestsellers / Shop */
+
+.best-sellers {
+  text-align: center;
+  margin: 20px 0;
+  color: var(--color-primary);
+}
+
+.jacket_image {
+  max-width: 230px;
+  max-height: 270px;
+  min-height: 270px;
+}
+
+.jacket_name {
+  margin-top: 6px;
+  font-size: 1.4em;
+  color: var(--color-primary);
+}
+
+.jacket_description {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: var(--color-primary);
+}
+
+.jacket_price {
+  margin-top: 6px;
+  font-size: 1.1em;
+  color: #ec5858;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+  margin: 40px 90px;
+  justify-content: center;
+}
+
+.product-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  text-align: center;
+  padding: 10px;
+}
+
+.cta-small {
+  background: #53a4b9;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px 70px;
+  margin-top: 7px;
+  cursor: pointer;
+  max-width: 250px;
+  align-items: center;
+}
