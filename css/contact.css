@@ -7,7 +7,7 @@
 .signup_container {
   max-width: 500px;
   padding: 20px;
-  margin: 20px 20px;
+  margin: 20px 400px;
   background: #fff;
   border-radius: 5px;
 }
@@ -53,4 +53,13 @@ input {
   cursor: pointer;
   max-width: 250px;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact_container {
+    padding: 20px;
+    margin: 20px 20px;
+    background: #fff;
+    border-radius: 5px;
+  }
 }

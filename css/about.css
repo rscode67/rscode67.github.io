@@ -4,8 +4,10 @@
 
 .about_container {
   display: flex;
-  padding: 30px 70px;
   align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  margin: 20px 100px;
 }
 
 .about_story {
@@ -27,4 +29,14 @@
   max-width: 400px;
   max-height: 550px;
   margin: 10px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .about_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    margin: 20px 0;
+  }
 }
