@@ -16,17 +16,25 @@
   text-align: justify;
 }
 
+.product_details h1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .product_container {
   padding: 15px 40px;
+  margin-top: 20px;
 }
 
 .product_price {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .jacket_price {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
   color: #ec5858;
 }
 

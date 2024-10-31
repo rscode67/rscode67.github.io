@@ -19,6 +19,11 @@
 }*/
 
 @import url("./reset.css");
+@import url("./variables.css");
+
+html {
+  scroll-behavior: smooth;
+}
 
 /* Banner */
 
@@ -129,4 +134,60 @@
   border-radius: 7px;
   text-align: center;
   padding: 10px;
+}
+
+.back_to_top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  text-decoration: underline;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .top-icons {
+    display: none;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .banner-content h1 {
+    margin: 150px 0 0 0;
+    color: var(--color-secondary);
+  }
+
+  .cta_banner {
+    margin-top: 20px;
+  }
+
+  .column {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+
+  .about_container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

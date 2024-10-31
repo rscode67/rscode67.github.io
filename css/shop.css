@@ -3,6 +3,10 @@
 
 /* Bestsellers / Shop */
 
+html {
+  scroll-behavior: smooth;
+}
+
 .best-sellers {
   text-align: center;
   margin: 20px 0;
@@ -59,4 +63,13 @@
   cursor: pointer;
   max-width: 250px;
   align-items: center;
+}
+
+.back_to_top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  text-decoration: underline;
+  color: var(--color-primary);
+  font-size: 0.9rem;
 }
