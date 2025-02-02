@@ -23,6 +23,7 @@ label {
   margin: 10px 0 5px;
   color: var(--color-primary);
   align-items: center;
+  flex: 1;
 }
 
 textarea,
@@ -51,5 +52,4 @@ input {
     background: #fff;
     border-radius: 5px;
   }
-
 }
