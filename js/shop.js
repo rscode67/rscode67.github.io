@@ -34,36 +34,38 @@ async function fetchProducts() {
             ><button class="cta-small">Product details</button></a
           >
         </figure>`
-            myProduct.appendChild(card);
+            myProduct.appendChild(card); // Each card is appended to the container element with the id myProductContainer
         });
     } else {
         throw new Error("failed to load products")
     }
 }
 
+// This function filters the products based on a selected gender from a dropdown menu.
 function filterProduct(){
-  const gender = document.getElementById('genderFilter').value;
-  // made a new array using spread operator and stored it in a new variable
+  const gender = document.getElementById('genderFilter').value; // Retrieves the current value e.g, 'male', 'female' from the gender filter element.
+  // made a new array using spread operator and stored it in a new variable. Creates a shallow copy of the product data array to avoid mutating the original array. 
   let myProduct = [...products.data];
-  // gender = "" ==> false
-  // gender = "male"|| "female"  ===> true
-
+  
   if (gender) {
     myProduct = myProduct.filter((item) => item.gender === gender);
     console.log('my filtered array', myProduct);
   }
-  displayProducts(myProduct);
+  displayProducts(myProduct); // Display Update. Calls displayProducts(myProduct) to update the product lists on the page with the filtered results.
+  
 }
 
+// This function handles the display of products in the DOM
 function displayProducts(newProducts) {
   const myProduct = document.getElementById('myProductContainer');
   myProduct.innerHTML = '';
 
+  // Loops over each product in the provided array and creates a card(a div element) with the product information
   newProducts.forEach(element => {
     const card = document.createElement('div');
     // onClick event on button directly 
     // and added a functionality to move to new screen using window.location.href
-    // <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
+    // Button tag includes an onClick event that changes the page location to a product details page, passing the product's id as a query parameter.
     card.innerHTML = `
             <figure class="product-item">
           <img
@@ -76,7 +78,7 @@ function displayProducts(newProducts) {
           <p class="jacket_price">${element.price}</p>
           <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
         </figure>`
-    myProduct.appendChild(card);
+    myProduct.appendChild(card); // Each card is added to the product container.
   });
 }
 
@@ -87,10 +89,12 @@ document.getElementById('genderFilter').addEventListener('change', filterProduct
 
 // })
 
+// Event Binding - Adds an event listener to the element with the id genderFilter. When the value of this element changes (e.g., the user selects a different gender), the filterProduct function is called to filter and update the displayed products.
 
 
 
-//function call
+
+// Function call means starting the process - at the end of the script, fetchProducts() is called to immediately fetch and display the product when the page loads.
 fetchProducts();
 
  
