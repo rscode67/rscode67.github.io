@@ -7,7 +7,7 @@ const productId = urlParams.get("id")
 console.log(urlParams.get('name'));
 
 async function fetchProduct() {
-  // console.log(API_URL+productId)
+   console.log(API_URL+productId)
   try {
       const response = await fetch(API_URL + productId);
       console.log(response);
@@ -17,28 +17,29 @@ async function fetchProduct() {
           const myProduct = product.data;
 
           
-
+          displayProducts(myProduct);
           const container = document.getElementById('productContainer');
+          console.log(container);
           container.innerHTML = `
           <div class="product_pic">
           <img
-            src="${element.image.url}"
-            alt="${element.image.alt}"
+            src="${myProduct.image.url}"
+            alt="${myProduct.image.alt}"
             class="product_image"
           />
         </div>
         <div class="product_details">
-          <h1>${element.title}</h1>
-          <p>${element.description}</p>
+          <h1>${myProduct.title}</h1>
+          <p>${myProduct.description}</p>
         </div>
         <div class="product_price">
-          <p class="jacket_price">${element.price}</p>
+          <p class="jacket_price">${myProduct.price}</p>
           <a href="index.html"
             ><button class="cta-small product_cta">Buy now</button></a
           >
         </div> `
 
-        displayProducts(myProduct);
+        
           
 
           
