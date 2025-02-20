@@ -3,7 +3,8 @@ console.log("product page connected");
 const API_URL = "https://v2.api.noroff.dev/rainy-days/";
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let myOutsideProduct;
 
 console.log(urlParams.get("name"));
 
@@ -16,6 +17,8 @@ async function fetchProduct() {
       const product = await response.json();
       console.log(product.data);
       const myProduct = product.data;
+      myOutsideProduct = product.data;
+
       const container = document.getElementById("productContainer");
       console.log(container);
       container.innerHTML = `
@@ -32,7 +35,7 @@ async function fetchProduct() {
         </div>
         <div class="product_price">
           <p class="jacket_price">${myProduct.price}</p>
-          <button onClink="addToCart(${myProduct})" class="cta-small product_cta">Buy now</button>
+          <button onClick="addToCart()" class="cta-small product_cta">Buy now</button>
         </div> `;
     }
   } catch (e) {
@@ -40,6 +43,16 @@ async function fetchProduct() {
   }
 }
 
-function addToCart() {}
+function addToCart() {
+  console.log(myOutsideProduct);
+  cart.push(myOutsideProduct);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCount();
+}
 
+function updateCount() {
+  document.getElementById("counter").textContent = cart.length;
+}
+
+updateCount();
 fetchProduct();
