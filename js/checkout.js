@@ -22,6 +22,17 @@ function fetchProduct() {
 
     `;
   });
+
+  cartDetails.innerHTML = `
+  <h2>Cart Details</h2>
+  <p>${bill}</p>
+  <button onClick="proceed()">Proceed to checkout</button>
+  `;
+}
+
+function proceed() {
+  localStorage.removeItem("cart");
+  window.location.href = "checkout.html";
 }
 
 function removeFromCart(id) {
