@@ -35,7 +35,7 @@ async function fetchProduct() {
         </div>
         <div class="product_price">
           <p class="jacket_price">${myProduct.price}</p>
-          <button onClick="addToCart()" class="cta-small product_cta">Buy now</button>
+          <button onClick="addToCart()" class="cta-small product_cta">Add to Cart</button>
         </div> `;
     }
   } catch (e) {

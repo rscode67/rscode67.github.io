@@ -17,7 +17,9 @@ function fetchProduct() {
     return `
     <div>
     <p>${item.title}</p>
-    <button onClick="removeFromCart('${item.id}')">Remove Item</button>
+    <img src="${item.image.url}" alt="Product">
+
+    <button onclick="removeFromCart('${item.id}')">Remove Item</button>
     </div>
 
     `;
@@ -32,7 +34,7 @@ function fetchProduct() {
 
 function proceed() {
   localStorage.removeItem("cart");
-  window.location.href = "checkout.html";
+  window.location.href = "checkoutConfirm.html";
 }
 
 function removeFromCart(id) {
