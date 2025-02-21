@@ -17,9 +17,9 @@ function fetchProduct() {
     return `
     <div>
     <p>${item.title}</p>
-    <img src="${item.image.url}" alt="Product">
+    <img src="${item.image.url}" alt="Product" class="product-image-checkout">
 
-    <button onclick="removeFromCart('${item.id}')">Remove Item</button>
+    <button onclick="removeFromCart('${item.id}')" class="cta-small">Remove Item</button>
     </div>
 
     `;
@@ -28,7 +28,7 @@ function fetchProduct() {
   cartDetails.innerHTML = `
   <h2>Cart Details</h2>
   <p>${bill}</p>
-  <button onClick="proceed()">Proceed to checkout</button>
+  <button onClick="proceed()" class="cta-small">Proceed to checkout</button>
   `;
 }
 
