@@ -11,9 +11,10 @@ async function fetchProducts() {
     products = await response.json();
     console.log(products);
     const newProducts = products.data;
-    displayProducts(newProducts);
-
     const myProduct = document.getElementById("myProductContainer");
+
+    myProduct.innerHTML = "";
+
     newProducts.forEach((element) => {
       const card = document.createElement("div");
       card.innerHTML = `
@@ -48,6 +49,7 @@ function filterProduct() {
 
 function displayProducts(newProducts) {
   const myProduct = document.getElementById("myProductContainer");
+
   myProduct.innerHTML = "";
 
   newProducts.forEach((element) => {
