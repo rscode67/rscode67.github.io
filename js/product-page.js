@@ -1,5 +1,3 @@
-console.log("product page connected");
-
 const API_URL = "https://v2.api.noroff.dev/rainy-days/";
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");

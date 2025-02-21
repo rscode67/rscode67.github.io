@@ -11,8 +11,8 @@ async function fetchProducts() {
     products = await response.json();
     console.log(products);
     const newProducts = products.data;
-
     displayProducts(newProducts);
+
     const myProduct = document.getElementById("myProductContainer");
     newProducts.forEach((element) => {
       const card = document.createElement("div");
@@ -49,6 +49,24 @@ function filterProduct() {
 function displayProducts(newProducts) {
   const myProduct = document.getElementById("myProductContainer");
   myProduct.innerHTML = "";
+
+  newProducts.forEach((element) => {
+    const card = document.createElement("div");
+    card.innerHTML = `
+            <figure class="product-item">
+          <img
+            src="${element.image.url}"
+            class="jacket_image"
+            alt="${element.image.alt}"
+          />
+          <figcaption class="jacket_name">${element.title}</figcaption>
+          <p class="jacket_description">${element.description}</p>
+          <p class="jacket_price">${element.price}</p>
+          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
+        </figure>`;
+
+    myProduct.appendChild(card);
+  });
 }
 
 document

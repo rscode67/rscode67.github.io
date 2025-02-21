@@ -87,6 +87,10 @@ nav ul li a {
   align-items: center;
 }
 
+#counter {
+  color: #ec5858;
+}
+
 /* Footer */
 
 .footer-container {

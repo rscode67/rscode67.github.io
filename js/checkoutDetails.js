@@ -1,5 +1,3 @@
-console.log("connected");
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function fetchProduct() {
