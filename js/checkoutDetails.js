@@ -14,7 +14,7 @@ function fetchProduct() {
     bill = bill + item.price;
     return `
     <div>
-    <p>${item.title}</p>
+    <p class="productName">${item.title}</p>
     <img src="${item.image.url}" alt="Product" class="product-image-checkout">
 
     <button onclick="removeFromCart('${item.id}')" class="cta-small">Remove Item</button>
@@ -38,6 +38,11 @@ function proceed() {
 function removeFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  if (cart.length === 0) {
+    document.getElementById("cartDetails").style.display = "none";
+  }
+
   fetchProduct();
 }
 

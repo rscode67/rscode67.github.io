@@ -3,7 +3,16 @@ let products = [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let myOutsideProduct;
 
+function showLoader() {
+  document.getElementById("loader").style.display = "block";
+}
+
+function hideLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+
 async function fetchProducts() {
+  showLoader();
   const response = await fetch(API_URL);
   console.log(response.ok);
 
@@ -31,6 +40,7 @@ async function fetchProducts() {
         </figure>`;
       myProduct.appendChild(card);
     });
+    hideLoader();
   } else {
     throw new Error("failed to load products");
   }

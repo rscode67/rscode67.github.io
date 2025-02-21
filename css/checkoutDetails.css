@@ -40,3 +40,8 @@ h2 {
   text-align: center;
   margin-bottom: 25px;
 }
+
+.productName {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
