@@ -2,6 +2,41 @@
 @import url(./variables.css);
 
 .product-image-checkout {
-  width: 100px;
+  width: 80px;
   height: auto;
+  border-radius: 5px;
+}
+
+main {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cartProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#cartDetails {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+h1,
+h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 25px;
 }

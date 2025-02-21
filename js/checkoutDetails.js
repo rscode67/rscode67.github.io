@@ -7,7 +7,7 @@ function fetchProduct() {
   const cartDetails = document.getElementById("cartDetails");
 
   if (cart.length === 0) {
-    cartContainer.innerHTML = `<h1>Cart Empty</h1>`;
+    cartContainer.innerHTML = `<h2>Cart Empty</h2>`;
     return;
   }
 
@@ -26,7 +26,7 @@ function fetchProduct() {
   });
 
   cartDetails.innerHTML = `
-  <h2>Cart Details</h2>
+  <h2>Cart Total</h2>
   <p>${bill}</p>
   <button onClick="proceed()" class="cta-small">Proceed to checkout</button>
   `;

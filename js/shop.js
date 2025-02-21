@@ -1,5 +1,7 @@
 const API_URL = "https://v2.api.noroff.dev/rainy-days";
 let products = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let myOutsideProduct;
 
 async function fetchProducts() {
   const response = await fetch(API_URL);
@@ -52,5 +54,18 @@ function displayProducts(newProducts) {
 document
   .getElementById("genderFilter")
   .addEventListener("change", filterProduct);
+
+function addToCart() {
+  console.log(myOutsideProduct);
+  cart.push(myOutsideProduct);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCount();
+}
+
+function updateCount() {
+  document.getElementById("counter").textContent = cart.length;
+}
+
+updateCount();
 
 fetchProducts();

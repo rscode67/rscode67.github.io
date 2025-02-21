@@ -45,6 +45,19 @@ async function fetchProduct() {
 
 function addToCart() {
   console.log(myOutsideProduct);
+
+  if (!myOutsideProduct) {
+    console.error("No product to add to cart");
+    return;
+  }
+
+  const alreadyInCart = cart.some((item) => item.id === myOutsideProduct.id);
+
+  if (alreadyInCart) {
+    alert("This item is already in your cart.");
+    return;
+  }
+
   cart.push(myOutsideProduct);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCount();
