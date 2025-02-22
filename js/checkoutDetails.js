@@ -9,25 +9,56 @@ function fetchProduct() {
     return;
   }
 
+  // let bill = 0;
+  // cartContainer.innerHTML = cart.map((item) => {
+  //   bill = bill + item.price;
+  //   return `
+  //   <div>
+  //   <p class="productName">${item.title}</p>
+  //   <img src="${item.image.url}" alt="Product" class="product-image-checkout">
+
+  //   <button onclick="removeFromCart('${item.id}')" class="cta-small">Remove Item</button>
+  //   </div>
+
+  //   `;
+  // });
+
+  // cartDetails.innerHTML = `
+  // <h2>Cart Total</h2>
+  // <p>${bill}</p>
+  // <button onClick="proceed()" class="cta-small">Proceed to checkout</button>
+  // `;
+
   let bill = 0;
-  cartContainer.innerHTML = cart.map((item) => {
-    bill = bill + item.price;
-    return `
-    <div>
-    <p class="productName">${item.title}</p>
-    <img src="${item.image.url}" alt="Product" class="product-image-checkout">
-
-    <button onclick="removeFromCart('${item.id}')" class="cta-small">Remove Item</button>
-    </div>
-
+  cartContainer.innerHTML = cart
+    .map((item) => {
+      bill += item.price;
+      const formattedPrice = formatPrice(item.price, item.currency || "USD");
+      return `
+      <div>
+        <p class="productName">${item.title}</p>
+        <img src="${item.image.url}" alt="Product" class="product-image-checkout">
+        <p class="productPrice">${formattedPrice}</p> 
+        <button onclick="removeFromCart('${item.id}')" class="cta-small">Remove Item</button>
+      </div>
     `;
-  });
+    })
+    .join("");
+
+  const formattedTotal = formatPrice(bill, cart[0]?.currency || "USD");
 
   cartDetails.innerHTML = `
-  <h2>Cart Total</h2>
-  <p>${bill}</p>
-  <button onClick="proceed()" class="cta-small">Proceed to checkout</button>
+    <h2>Cart Total</h2>
+    <p>${formattedTotal}</p>
+    <button onClick="proceed()" class="cta-small">Proceed to checkout</button>
   `;
+}
+
+function formatPrice(price, currencyCode = "USD", locale = "en-us") {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currencyCode,
+  }).format(price);
 }
 
 function proceed() {

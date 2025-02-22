@@ -53,9 +53,11 @@ async function fetchProducts() {
           />
           <figcaption class="jacket_name">${element.title}</figcaption>
           <p class="jacket_description">${element.description}</p>
-          <p class="jacket_price">${element.price}</p>
+          <p class="jacket_price">$ ${element.price.toFixed(2)}</p>
           <p>${element.gender}</p>
-          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
+          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${
+            element.id
+          }'">Product details</button>
         </figure>`;
       myProduct.appendChild(card);
     });

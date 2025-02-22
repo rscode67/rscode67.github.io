@@ -35,8 +35,10 @@ async function fetchProducts() {
           />
           <figcaption class="jacket_name">${element.title}</figcaption>
           <p class="jacket_description">${element.description}</p>
-          <p class="jacket_price">${element.price}</p>
-          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
+          <p class="jacket_price">$ ${element.price.toFixed(2)}</p>
+          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${
+            element.id
+          }'">Product details</button>
         </figure>`;
       myProduct.appendChild(card);
     });
@@ -73,8 +75,10 @@ function displayProducts(newProducts) {
           />
           <figcaption class="jacket_name">${element.title}</figcaption>
           <p class="jacket_description">${element.description}</p>
-          <p class="jacket_price">${element.price}</p>
-          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${element.id}'">Product details</button>
+          <p class="jacket_price">£ ${element.price.toFixed(2)}</p>
+          <button class="cta-small" onClick="window.location.href='../product-page.html?id=${
+            element.id
+          }'">Product details</button>
         </figure>`;
 
     myProduct.appendChild(card);

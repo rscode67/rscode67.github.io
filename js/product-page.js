@@ -32,7 +32,7 @@ async function fetchProduct() {
           <p>${myProduct.description}</p>
         </div>
         <div class="product_price">
-          <p class="jacket_price">${myProduct.price}</p>
+          <p class="jacket_price">$ ${myProduct.price.toFixed(2)}</p>
           <button onClick="addToCart()" class="cta-small product_cta">Add to Cart</button>
         </div> `;
     }
