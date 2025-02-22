@@ -14,11 +14,10 @@ function hideLoader() {
 async function fetchProducts() {
   showLoader();
   const response = await fetch(API_URL);
-  console.log(response.ok);
 
   if (response.ok) {
     products = await response.json();
-    console.log(products);
+
     const newProducts = products.data;
     const myProduct = document.getElementById("myProductContainer");
 
@@ -54,7 +53,6 @@ function filterProduct() {
 
   if (gender) {
     myProduct = myProduct.filter((item) => item.gender === gender);
-    console.log("my filtered array", myProduct);
   }
   displayProducts(myProduct);
 }
@@ -90,7 +88,6 @@ document
   .addEventListener("change", filterProduct);
 
 function addToCart() {
-  console.log(myOutsideProduct);
   cart.push(myOutsideProduct);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCount();

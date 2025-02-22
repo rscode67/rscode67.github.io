@@ -7,18 +7,17 @@ let myOutsideProduct;
 console.log(urlParams.get("name"));
 
 async function fetchProduct() {
-  console.log(API_URL + productId);
   try {
     const response = await fetch(API_URL + productId);
-    console.log(response);
+
     if (response.ok) {
       const product = await response.json();
-      console.log(product.data);
+
       const myProduct = product.data;
       myOutsideProduct = product.data;
 
       const container = document.getElementById("productContainer");
-      console.log(container);
+
       container.innerHTML = `
           <div class="product_pic">
           <img
@@ -36,16 +35,13 @@ async function fetchProduct() {
           <button onClick="addToCart()" class="cta-small product_cta">Add to Cart</button>
         </div> `;
     }
-  } catch (e) {
-    console.error("Error fetching product:", e);
-  }
+  } catch (e) {}
 }
 
 function addToCart() {
   console.log(myOutsideProduct);
 
   if (!myOutsideProduct) {
-    console.error("No product to add to cart");
     return;
   }
 

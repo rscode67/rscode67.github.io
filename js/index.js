@@ -15,11 +15,9 @@ function updateCount() {
 
 async function fetchProducts() {
   const response = await fetch(API_URL);
-  console.log(response.ok);
 
   if (response.ok) {
     products = await response.json();
-    console.log(products);
     let newProducts = products.data;
 
     const myProduct = document.getElementById("myProductContainer");

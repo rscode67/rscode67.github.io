@@ -2,7 +2,6 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let myOutsideProduct;
 
 function addToCart() {
-  console.log(myOutsideProduct);
   cart.push(myOutsideProduct);
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCount();
