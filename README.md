@@ -1,4 +1,4 @@
-Rainy Days - Frontend Course Assignment
+## Rainy Days - Frontend Course Assignment
 
 ## Overview
 Rainy Days is a e-commerce website for outdoor jackets. This project was developed as part of Noroff frontend development course and focuses on HTML, CSS, and JavaScript to create an interactive and user-friendly shopping experience.
