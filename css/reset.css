@@ -137,15 +137,11 @@ nav ul li a {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    height: 170px;
   }
 
-  .top-icons {
+  .profile-icon {
     display: none;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    margin-top: 20px;
   }
 
   .banner-content h1 {
@@ -153,14 +149,18 @@ nav ul li a {
     color: #e2e9eb;
   }
 
-  .cta_banner {
-    margin-top: 20px;
-  }
-
   .column {
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
+  }
+
+  .item {
+    width: 400px;
+  }
+
+  .cta-small {
+    font-size: 0.8em;
   }
 
   .footer {

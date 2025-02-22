@@ -50,9 +50,9 @@
 @media only screen and (max-width: 768px) {
   .product_cta {
     margin-top: 10px;
-    margin-left: 130px;
-    padding: 10px 40px;
-    font-size: 0.6rem;
+    margin-left: 110px;
+    padding: 10px 12px;
+    font-size: 0.7rem;
   }
 
   .product_image {
@@ -67,5 +67,12 @@
     color: var(--color-primary);
     text-align: justify;
     font-size: 0.8rem;
+  }
+
+  .jacket_price {
+    font-size: 0.9em;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: #ec5858;
   }
 }
