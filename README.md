@@ -31,7 +31,7 @@ This project is for educational purposes only and does not have a commercial lic
 
 ## Student Info 
 
-Reuel Santos 
-Noroff University College
-Frontend Development Online
+- Reuel Santos 
+- Noroff University College
+- Frontend Development Online
 
