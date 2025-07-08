@@ -39,8 +39,6 @@ async function fetchProduct() {
 }
 
 function addToCart() {
-  console.log(myOutsideProduct);
-
   if (!myOutsideProduct) {
     return;
   }
